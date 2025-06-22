@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XKnulps - Settings</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #181818;
+            color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5em;
+            justify-content: center;
+            background: #232323;
+            margin: 0;
+            padding: 1em 0;
+        }
+        nav ul li a {
+            color: #eee;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: background .2s, color .2s;
+            border-radius: 6px;
+        }
+        nav ul li a.active,
+        nav ul li a:hover {
+            background: #38d39f;
+            color: #181818;
+        }
+        main {
+            max-width: 600px;
+            margin: 3em auto;
+            background: #232323;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px #0002;
+            padding: 2em;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 0.5em;
+        }
+        .settings-group {
+            margin: 2em 0;
+            text-align: left;
+        }
+        .settings-group label {
+            display: block;
+            margin-bottom: .5em;
+            color: #b3f7d6;
+        }
+        .settings-group input, .settings-group select {
+            width: 100%;
+            padding: .5em;
+            margin-bottom: 1em;
+            border-radius: 5px;
+            border: none;
+            background: #181818;
+            color: #f5f5f5;
+            font-size: 1em;
+        }
+        .settings-group input[disabled], .settings-group select[disabled] {
+            color: #bcbcbc;
+        }
+        .settings-note {
+            color: #ffb347;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="file.html">File</a></li>
+            <li><a href="gen.html">Gen</a></li>
+            <li><a href="generator.html">Generator</a></li>
+            <li><a href="har.html">HAR</a></li>
+            <li><a href="settings.html" class="active">Settings</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Settings</h1>
+        <p>Adjust the application settings below. (Note: This static HTML page does not save changes.)</p>
+        <form>
+            <div class="settings-group">
+                <label for="username">Display Name</label>
+                <input type="text" id="username" name="username" placeholder="Your name..." disabled>
+            </div>
+            <div class="settings-group">
+                <label for="theme">Theme</label>
+                <select id="theme" name="theme" disabled>
+                    <option>Dark</option>
+                    <option>Light</option>
+                </select>
+            </div>
+            <div class="settings-group">
+                <label for="notifications">Notifications</label>
+                <input type="checkbox" id="notifications" name="notifications" disabled> Enable email notifications
+            </div>
+            <div class="settings-note">
+                Settings are disabled in this static HTML demo.<br>
+                In a dynamic app, your preferences would be saved here.
+            </div>
+        </form>
+    </main>
+</body>
+</html>
